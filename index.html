@@ -1,16 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
 <body>
 <h1>Eu tenho Visão com ...</h1>
   <h2 style="color:blue;">Tiago Luiz Pereira</h2>
   <h2>Página pessoal para visão computacional</h2>
-  <img src ="foto.jpg" alt="Tava sem foto mais recente..." height="300">
+  <nav>  <img src ="foto.jpg" alt="Tava sem foto mais recente..." height="200"></nav>
+
     <img src ="avatar.jpg" alt="E sem criatividade" height="200">
 
 <h2>Áudio de teste:</h2>
 <h3>Preferencias ...</h3>
 <p>Tenho pouca experiencia com visão computacional em programação, apenas com leve experiencia em OCR</p>
   <p>Alguns filmes favoritos seriam O Grande Hotel Budapeste, Uma Saída de Mestre e Pulp Fiction</p>
+  <iframe width="824" height="747" src="https://www.youtube.com/embed/YCHuF6RXEKk" title="Coming Attractions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <img src ="capivara.jpg" height="200">
 
 </body>
